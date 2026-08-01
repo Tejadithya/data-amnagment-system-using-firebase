@@ -5,22 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js"></script>
-    <script src="signup.js"></script>
 </head>
 <body>
-    
     <div class="container">
         <h2>Sign Up</h2>
-        <input type="text" id="signup-name" placeholder="Full Name">
-        <input type="email" id="signup-email" placeholder="Email">
+        <div id="signup-message" class="message" hidden></div>
+        <input type="text" id="signup-name" placeholder="Username" autocomplete="username">
+        <input type="email" id="signup-email" placeholder="Email" autocomplete="email">
         <input type="tel" id="signup-phone" placeholder="Phone">
-        <input type="password" id="signup-password" placeholder="Password">
-        <input type="password" id="signup-confirm-password" placeholder="Confirm Password">
+        <input type="password" id="signup-password" placeholder="Password" autocomplete="new-password">
+        <input type="password" id="signup-confirm-password" placeholder="Confirm Password" autocomplete="new-password">
         <button id="signup-btn">Sign Up</button>
-        <p>Already have an account? <a href="login.html">Login</a></p>
+        <p class="form-footer">Already have an account? <a href="login.html">Login</a></p>
     </div>
-    
+
+    <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-database-compat.js"></script>
+    <script src="js/firebase-config.js"></script>
+    <script src="js/auth.js"></script>
 </body>
 </html>
